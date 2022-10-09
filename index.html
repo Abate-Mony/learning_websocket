@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello!</title>
+</head>
+<script>
+    const socket = new WebSocket("ws://localhost:4000")
+    socket.addEventListener("open", () => {
+        console.log("connected to the websocket server")
+    })
+    socket.addEventListener("message", (e) => {
+        console.log("message : " + e.data)
+    })
+</script>
+
+<body>Integrating Socket.io with Node.js and Express</body>
+
+</html>
